@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessX.Entities\BusinessX.Entities.csproj" />
+    <ProjectReference Include="..\..\BusinessX.ProxyService\BusinessX.ProxyService.csproj" />
+    <ProjectReference Include="..\..\BusinessX.ViewModel\BusinessX.ViewModel.csproj" />
+    <ProjectReference Include="..\..\SLC\BusinessX.SLC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

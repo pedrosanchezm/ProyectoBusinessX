@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BusinessX.Xamarin.Principal"
+             xmlns:vm="clr-namespace:BusinessX.ViewModel;assembly=BusinessX.ViewModel">
+
+    <ContentPage.BindingContext>
+        <vm:Principal/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+    <StackLayout>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Margin="10">ID Genero:</Label>
+                <Entry WidthRequest="50" Text="{Binding IDGeneroL}"/>
+                <Button Text="Buscar" 
+                        Margin="10" 
+                        Command="{Binding BuscarLibroCommand}" />
+                <Button Text="Ver Detalle" 
+                        Margin="10" 
+                        WidthRequest="100" 
+                        Command="{Binding BuscarLibroPorIDCommand}" />
+            </StackLayout>
+            <ListView ItemsSource="{Binding Path=Products}" SelectedItem="{Binding LibroSelected}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding IDL}" />
+                                    <Label Grid.Column="1" Text="{Binding NombreL}" />
+                                    <Label Grid.Column="2" Text="{Binding AutorL}" />
+                                    <Label Grid.Column="3" Text="{Binding IDGeneroL}" />
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout Margin="30,0,0,0">
+            <Label>Detalle del Producto</Label>
+            <StackLayout Orientation="Horizontal">
+                <Label>ID:</Label>
+                <Label Text="{Binding IDL}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label>Nombre:</Label>
+                <Label Text="{Binding NombreL}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label>Precio:</Label>
+                <Label Text="{Binding PrecioL}" />
+            </StackLayout>
+        </StackLayout>
+            <StackLayout Margin="10">
+                <Label>Libro nuevo</Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label>ID:</Label>
+                    <Entry Text="{Binding ProductID}" 
+                       WidthRequest="100" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label>Nombre:</Label>
+                    <Entry Text="{Binding ProductName}" 
+                       WidthRequest="100" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label>ID de Genero:</Label>
+                    <Entry Text="{Binding CategoryID}" 
+                       WidthRequest="100" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label>Stock:</Label>
+                    <Entry Text="{Binding UnitsInStock}" 
+                       WidthRequest="100" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label>Precio:</Label>
+                    <Entry Text="{Binding UnitPrice}" 
+                       WidthRequest="100" />
+                </StackLayout>
+                <Button Text="Crear Producto" Command="{Binding CreateProductCommand}" />
+                <Button Text="Actualizar Producto" Command="{Binding UpdateProductCommand}" />
+                <Button Text="Eliminar Producto" Command="{Binding DeleteProductCommand}" />
+                <Label Text="{Binding RespuestaBool}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
