@@ -1,2 +1,2 @@
 # ProyectoBusinessX
-Prueba 1
+Prueba para probar funcionalidad de guthub
