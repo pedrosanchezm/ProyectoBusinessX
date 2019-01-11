@@ -6,6 +6,7 @@ namespace BusinessX.Entities
 {
     public class Libro
     {
+        //Tercer comentario
         public int IDL { get; set; }
         public string NombreL { get; set; }
         public string AutorL { get; set; }
