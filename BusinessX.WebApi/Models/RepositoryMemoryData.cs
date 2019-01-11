@@ -20,9 +20,34 @@ namespace BusinessX.WebApi.Models
             Generos.Add(new Genero { IDG = 3, NombreGenero = "Genero 3" });
             Generos.Add(new Genero { IDG = 4, NombreGenero = "Genero 4" });
             Generos.Add(new Genero { IDG = 5, NombreGenero = "Genero 5" });
-            Libros.Add(new Libro { IDL = 1, NombreL = "Libro 1", AutorL = "Autor 1", Editorial = "Editorial 1", ISBN = "ISBN 1", IDGeneroL = 5 });
-            Libros.Add(new Libro { IDL = 2, NombreL = "Libro 2", AutorL = "Autor 2", Editorial = "Editorial 2", ISBN = "ISBN 2", IDGeneroL = 3 });
-            Libros.Add(new Libro { IDL = 2, NombreL = "Libro 3", AutorL = "Autor 3", Editorial = "Editorial 3", ISBN = "ISBN 3", IDGeneroL = 5 });
+            Libros.Add(new Libro {
+                IDL = 1,
+                NombreL = "Libro 1",
+                AutorL = "Autor 1",
+                Editorial = "Editorial 1",
+                ISBN = "ISBN 1",
+                IDGeneroL = 5,
+                PrecioL =45,
+                RutaImgL = "https://marketplace.canva.com/MACXC0twKgo/1/0/thumbnail_large/canva-green-and-pink-science-fiction-book-cover-MACXC0twKgo.jpg"
+            });
+            Libros.Add(new Libro { IDL = 2,
+                NombreL = "Libro 2",
+                AutorL = "Autor 2",
+                Editorial = "Editorial 2",
+                ISBN = "ISBN 2",
+                IDGeneroL = 3,
+                PrecioL = 50,
+                RutaImgL = "https://marketplace.canva.com/MACXC0twKgo/1/0/thumbnail_large/canva-green-and-pink-science-fiction-book-cover-MACXC0twKgo.jpg"
+            });
+            Libros.Add(new Libro { IDL = 2,
+                NombreL = "Libro 3",
+                AutorL = "Autor 3",
+                Editorial = "Editorial 3",
+                ISBN = "ISBN 3",
+                IDGeneroL = 5,
+                PrecioL = 30,
+                RutaImgL = "https://marketplace.canva.com/MACXC0twKgo/1/0/thumbnail_large/canva-green-and-pink-science-fiction-book-cover-MACXC0twKgo.jpg"
+            });
         }
         public List<Libro> ObtenerTodoLibro()
         {

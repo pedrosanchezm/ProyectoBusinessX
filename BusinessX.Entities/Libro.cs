@@ -12,6 +12,8 @@ namespace BusinessX.Entities
         public string AutorL { get; set; }
         public string Editorial { get; set; }
         public string ISBN { get; set; }
+        public double PrecioL { get; set; }
+        public string RutaImgL { get; set; }
         public int IDGeneroL { get; set; }
     }
 }
