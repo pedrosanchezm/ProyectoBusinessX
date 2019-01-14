@@ -177,6 +177,28 @@ namespace BusinessX.ViewModel
             }
         }
 
+        private double PrecioL_BF;
+        public double PrecioL
+        {
+            get { return PrecioL_BF; }
+            set
+            {
+                PrecioL_BF = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string RutaImgL_BF;
+        public string RutaImgL
+        {
+            get { return RutaImgL_BF; }
+            set
+            {
+                RutaImgL_BF = value;
+                OnPropertyChanged();
+            }
+        }
+
         private int IDGeneroL_BF;
         public int IDGeneroL
         {
